@@ -1,0 +1,8 @@
+%h2 #{@album.name}
+
+%table
+  - @album.tracks.each do |track|
+    %tr
+      %td= track.name
+      
+= link_to 'Download', album_download_path(@album)
