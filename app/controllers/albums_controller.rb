@@ -5,7 +5,7 @@ class AlbumsController < ApplicationController
   caches_page :index
   
   def index
-    @albums = Album.all
+    @albums = Album.order('name').all
   end
   
   def show

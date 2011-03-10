@@ -3,6 +3,6 @@
 %table
   - @album.tracks.each do |track|
     %tr
-      %td= track.name
+      %td= link_to track, track.name
       
 = link_to 'Download', album_download_path(@album)
